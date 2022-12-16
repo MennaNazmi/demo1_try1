@@ -8,7 +8,7 @@ stages {
           ansible-playbook --version
           ansible-galaxy --version
         '''
-      }
-    }
+      }}
+    stage('run ansible playbook') {steps{ ansiblePlaybook become: true, colorized: true,installation: 'ansible', playbook: 'site.yaml' }}
   }
 }
