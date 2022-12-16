@@ -9,6 +9,7 @@ stages {
           ansible-galaxy --version
         '''
       }}
-    stage('location now') {steps{ sh 'pwd' }}
+      stage('run ansible playbook') {steps{ ansiblePlaybook become: true, colorized: true,installation: 'ansible', playbook: 'main.yml' }}
+
   }
 }
