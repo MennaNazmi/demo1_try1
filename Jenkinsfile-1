@@ -9,6 +9,6 @@ stages {
           ansible-galaxy --version
         '''
       }}
-    stage('run ansible playbook') {steps{ ansiblePlaybook become: true, colorized: true,installation: 'ansible', playbook: 'site.yaml' }}
+    stage('run ansible playbook') {steps{ ansiblePlaybook become: true, colorized: true,installation: 'ansible', playbook: 'main.yml' }}
   }
 }
